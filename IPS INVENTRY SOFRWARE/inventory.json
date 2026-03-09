@@ -1,0 +1,29 @@
+[
+    {
+        "item": "MILK",
+        "qty": 69,
+        "cost": 500.0,
+        "sale": 700.0,
+        "barcode": "0001"
+    },
+    {
+        "item": "RICE",
+        "qty": 12,
+        "cost": 250.0,
+        "sale": 590.0
+    },
+    {
+        "item": "mouse",
+        "qty": 12,
+        "cost": 500.0,
+        "sale": 700.0,
+        "barcode": "0004"
+    },
+    {
+        "item": "SUGER",
+        "barcode": "",
+        "qty": 20,
+        "cost": 200.0,
+        "sale": 250.0
+    }
+]

@@ -1,0 +1,8 @@
+[
+    {
+        "id": "1",
+        "username": "HASNAT",
+        "password": "scrypt:32768:8:1$o5efKT8An6AjvSlj$f9e14d508a996e233118c9ce9355630426a04aacdbf42f66842804c3209ea8b80774ce72781571be209b096b979447f7d592ba913869e93f145e14936da279cc",
+        "role": "Staff"
+    }
+]

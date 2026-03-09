@@ -1,0 +1,147 @@
+[
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: MILK (+70)",
+        "time": "2026-03-05 01:15 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: RICE (+15)",
+        "time": "2026-03-05 01:16 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: mouse (+6)",
+        "time": "2026-03-05 01:16 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: milk (+5)",
+        "time": "2026-03-05 01:23 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 1 units of MILK",
+        "time": "2026-03-05 01:25 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 2 units of RICE",
+        "time": "2026-03-05 01:25 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 1 units of mouse",
+        "time": "2026-03-05 01:25 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "CLEARED ALL SALES RECORDS",
+        "time": "2026-03-05 01:31 PM"
+    },
+    {
+        "user": "IPS",
+        "action": "Sold 5 units of MILK",
+        "time": "2026-03-05 01:32 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 1 MILK to AHMAD",
+        "time": "2026-03-05 01:50 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: RICE (+0)",
+        "time": "2026-03-05 01:58 PM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 1 RICE",
+        "time": "2026-03-06 05:58 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: MILK",
+        "time": "2026-03-06 05:58 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 14 MILK",
+        "time": "2026-03-06 05:58 AM"
+    },
+    {
+        "user": "IPS",
+        "action": "Sold 1 MILK",
+        "time": "2026-03-06 06:00 AM"
+    },
+    {
+        "user": "IPS",
+        "action": "Sold 2 MILK",
+        "time": "2026-03-06 06:00 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 5 mouse",
+        "time": "2026-03-06 06:01 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: MOUSE",
+        "time": "2026-03-06 06:38 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: MOUSE",
+        "time": "2026-03-06 06:39 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: MOUSE",
+        "time": "2026-03-06 06:39 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: SUGER",
+        "time": "2026-03-06 06:40 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 1 SUGER",
+        "time": "2026-03-06 06:40 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Updated Stock: SUGER",
+        "time": "2026-03-06 06:41 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Sold 7 SUGER",
+        "time": "2026-03-06 06:41 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Logged Out",
+        "time": "2026-03-06 06:52 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Added Stock: SUGER",
+        "time": "2026-03-06 06:52 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Logged Out",
+        "time": "2026-03-06 06:53 AM"
+    },
+    {
+        "user": "IPS",
+        "action": "Logged Out",
+        "time": "2026-03-06 06:53 AM"
+    },
+    {
+        "user": "HASNAT",
+        "action": "Logged Out",
+        "time": "2026-03-06 12:41 PM"
+    }
+]

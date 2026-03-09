@@ -1,0 +1,90 @@
+[
+    {
+        "item": "MILK",
+        "qty": 5,
+        "amount": 35.0,
+        "profit": 10.0,
+        "date": "2026-03-05",
+        "time": "01:32 PM"
+    },
+    {
+        "item": "MILK",
+        "qty": 1,
+        "amount": 7.0,
+        "profit": 2.0,
+        "date": "2026-03-05",
+        "time": "01:50 PM"
+    },
+    {
+        "item": "RICE",
+        "qty": 1,
+        "amount": 590.0,
+        "profit": 340.0,
+        "date": "2026-03-06",
+        "month": "2026-03",
+        "time": "05:58 AM"
+    },
+    {
+        "item": "MILK",
+        "qty": 14,
+        "amount": 3500.0,
+        "profit": 700.0,
+        "date": "2026-03-06",
+        "month": "2026-03",
+        "time": "05:58 AM"
+    },
+    {
+        "item": "MILK",
+        "qty": 1,
+        "amount": 250.0,
+        "profit": 50.0,
+        "date": "2026-03-06",
+        "month": "2026-03",
+        "time": "06:00 AM"
+    },
+    {
+        "item": "MILK",
+        "qty": 2,
+        "amount": 500.0,
+        "profit": 100.0,
+        "date": "2026-03-06",
+        "month": "2026-03",
+        "time": "06:00 AM"
+    },
+    {
+        "item": "mouse",
+        "qty": 5,
+        "amount": 4025.0,
+        "profit": 25.0,
+        "date": "2026-03-06",
+        "month": "2026-03",
+        "time": "06:01 AM"
+    },
+    {
+        "item": "SUGER",
+        "qty": 1,
+        "amount": 0.0,
+        "profit": -500.0,
+        "date": "2026-03-06",
+        "month": "2026-03",
+        "time": "06:40 AM"
+    },
+    {
+        "item": "SUGER",
+        "qty": 7,
+        "amount": 1050.0,
+        "profit": -350.0,
+        "date": "2026-03-06",
+        "month": "2026-03",
+        "time": "06:41 AM"
+    },
+    {
+        "item": "MILK",
+        "qty": 1,
+        "amount": 700.0,
+        "profit": 200.0,
+        "date": "2026-03-06",
+        "month": "2026-03",
+        "time": "06:53 AM"
+    }
+]
