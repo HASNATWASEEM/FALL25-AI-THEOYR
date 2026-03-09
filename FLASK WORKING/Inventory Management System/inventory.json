@@ -1,0 +1,22 @@
+[
+    {
+        "item": "laptop",
+        "qty": 7
+    },
+    {
+        "item": "mouse",
+        "qty": 17
+    },
+    {
+        "item": "cable",
+        "qty": 9
+    },
+    {
+        "item": "milk",
+        "qty": 7
+    },
+    {
+        "item": "MILK",
+        "qty": 70
+    }
+]

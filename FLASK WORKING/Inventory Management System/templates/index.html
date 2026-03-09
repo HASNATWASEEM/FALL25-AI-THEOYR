@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPS Inventory Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            /* Grocery Background Image */
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                        url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container { margin-top: 30px; max-width: 900px; }
+        
+        /* Logo Styling */
+        .ips-logo {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        .header-section {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .card { 
+            border: none; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+            border-radius: 15px; 
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .btn-ips {
+            background-color: #004a99; /* Professional Blue */
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .btn-ips:hover { background-color: #003366; color: white; }
+
+        .table-container { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+        }
+
+        .table thead { background-color: #004a99; color: white; }
+        
+        .badge-stock { padding: 8px 12px; border-radius: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-section text-center">
+        <img src="LOGO_URL_HERE" alt="IPS Pakistan Logo" class="ips-logo" onerror="this.src='https://via.placeholder.com/150x50?text=IPS+PAKISTAN'">
+        <h1 class="display-5 fw-bold text-dark">IPS INVENTORY SYSTEM</h1>
+        <p class="lead text-secondary">Official Grocery Stock Management Portal</p>
+    </div>
+
+    <div class="card p-4 mb-4">
+        <h4 class="mb-3 text-primary">Update Inventory</h4>
+        <form action="/add" method="POST" class="row g-3">
+            <div class="col-md-5">
+                <label class="form-label fw-bold">Item Name</label>
+                <input type="text" name="item_name" class="form-control form-control-lg" placeholder="e.g. Basmati Rice" required>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label fw-bold">Quantity (Units)</label>
+                <input type="number" name="quantity" class="form-control form-control-lg" placeholder="100" required>
+            </div>
+            <div class="col-md-3 d-grid">
+                <label class="form-label invisible">Submit</label>
+                <button type="submit" class="btn btn-ips btn-lg">Add Stock</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="m-0 text-dark">Live Stock Status</h3>
+            <a href="/" class="btn btn-outline-primary shadow-sm">🔄 Refresh Data</a>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table table-striped align-middle">
+                <thead>
+                    <tr>
+                        <th class="ps-3">#</th>
+                        <th>Product Name</th>
+                        <th>Available Quantity</th>
+                        <th>Inventory Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in inventory %}
+                    <tr>
+                        <td class="ps-3 fw-bold">{{ loop.index }}</td>
+                        <td class="text-capitalize">{{ item.item }}</td>
+                        <td><span class="fs-5 fw-bold">{{ item.qty }}</span></td>
+                        <td>
+                            {% if item.qty|int > 10 %}
+                                <span class="badge bg-success badge-stock">In Stock</span>
+                            {% elif item.qty|int > 0 %}
+                                <span class="badge bg-warning text-dark badge-stock">Low Stock</span>
+                            {% else %}
+                                <span class="badge bg-danger badge-stock">Out of Stock</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    
+                    {% if not inventory %}
+                    <tr>
+                        <td colspan="4" class="text-center py-5 text-muted">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4076/4076432.png" width="50" class="mb-2 opacity-50"><br>
+                            No products found in the database.
+                        </td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
