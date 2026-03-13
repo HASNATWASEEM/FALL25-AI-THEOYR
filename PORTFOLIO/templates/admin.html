@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Panel</title>
+</head>
+
+<body>
+
+<h1>Portfolio Messages</h1>
+
+<table border="1">
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Message</th>
+</tr>
+
+{% for msg in messages %}
+
+<tr>
+<td>{{ msg.name }}</td>
+<td>{{ msg.email }}</td>
+<td>{{ msg.message }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

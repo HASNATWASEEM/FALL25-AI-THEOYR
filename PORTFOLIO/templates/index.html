@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Hasnat Waseem | AI Developer</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<style>
+  body {
+    background: #0f172a;
+    color: white;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Fix: allow clicks through particles background */
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none; /* This line fixes input clicking issue */
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div id="particles-js" class="fixed w-full h-full"></div>
+
+  <!-- HERO -->
+
+  <section class="relative min-h-screen flex flex-col justify-center items-center text-center">
+
+    <img src="{{ url_for('static', filename='images/hasnat.jpg') }}"
+      class="w-40 h-40 rounded-full border-4 border-blue-500 shadow-xl z-10" />
+
+    <h1 class="text-6xl font-bold mt-6 z-10">
+      Hasnat Waseem
+    </h1>
+
+    <h2 class="text-2xl mt-4 z-10">
+      <span id="typing"></span>
+    </h2>
+
+    <div class="mt-8 space-x-4 z-10">
+
+      <a href="#portfolio" class="bg-blue-500 px-6 py-3 rounded hover:bg-blue-600">Projects</a>
+
+      <a href="/static/cv.pdf" class="border px-6 py-3 rounded hover:bg-white hover:text-black">Download CV</a>
+
+      <a href="https://github.com" class="border px-6 py-3 rounded hover:bg-white hover:text-black">GitHub</a>
+
+    </div>
+    <p class="text-gray-400 mt-4">
+      Visitors: {{ visitors }}
+    </p>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="py-20 text-center" data-aos="fade-up">
+
+    <h2 class="text-4xl font-bold mb-6">
+      About Me
+    </h2>
+
+    <p class="max-w-3xl mx-auto text-gray-300">
+
+      I am Hasnat Waseem, a BS Artificial Intelligence student and Web Developer working at IPS Pakistan.
+
+      My work focuses on building intelligent systems and modern web applications using Python, Flask, Machine Learning,
+      Pandas and NumPy.
+
+      I love combining Artificial Intelligence with real world software products.
+
+    </p>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section class="py-20">
+
+    <h2 class="text-4xl text-center font-bold mb-12">
+      Tech Stack
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+      <div class="glass p-6 rounded text-center">HTML / CSS</div>
+
+      <div class="glass p-6 rounded text-center">Python</div>
+
+      <div class="glass p-6 rounded text-center">Machine Learning</div>
+
+      <div class="glass p-6 rounded text-center">Pandas / NumPy</div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <div id="github-projects"></div>
+
+  <script>
+    fetch("https://api.github.com/users/HASNATWASEEM/repos")
+      .then(res => res.json())
+      .then(data => {
+        let html = "";
+        data.slice(0, 6).forEach(repo => {
+          html += `
+            <div class="glass p-4 m-4">
+              <h3>${repo.name}</h3>
+              <p>${repo.description}</p>
+              <a href="${repo.html_url}" target="_blank">View Code</a>
+            </div>
+          `;
+        });
+        document.getElementById("github-projects").innerHTML = html;
+      });
+  </script>
+
+  <!-- CONTACT -->
+  <section class="py-20 text-center">
+
+    <h2 class="text-4xl font-bold mb-10">
+      Contact Me
+    </h2>
+
+    <form method="POST" class="max-w-xl mx-auto space-y-4">
+
+      <input name="name" placeholder="Your Name" class="w-full p-3 rounded text-black" autocomplete="off" spellcheck="false" />
+
+      <input name="email" placeholder="Your Email" class="w-full p-3 rounded text-black" autocomplete="off" spellcheck="false" />
+
+      <textarea name="message" placeholder="Your Message" class="w-full p-3 rounded text-black" autocomplete="off" spellcheck="false"></textarea>
+
+      <button class="bg-blue-500 px-6 py-3 rounded" type="submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </section>
+  <footer class="text-center py-6 bg-black">
+
+    <p>
+      © 2025 Hasnat Waseem | AI Developer
+    </p>
+
+  </footer>
+
+  <script>
+    new Typed("#typing", {
+      strings: [
+        "AI Developer",
+        "Machine Learning Engineer",
+        "Python Programmer",
+        "Web Developer"
+      ],
+      typeSpeed: 70,
+      backSpeed: 40,
+      loop: true
+    });
+
+    function filterProjects(category) {
+      let projects = document.querySelectorAll(".project");
+
+      projects.forEach(p => {
+        if (category === "all" || p.dataset.category === category) {
+          p.style.display = "block";
+        } else {
+          p.style.display = "none";
+        }
+      });
+    }
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        move: { speed: 2 }
+      }
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    function askAI() {
+      let q = document.getElementById("aiq").value;
+      let answer = "";
+
+      if (q.includes("skills")) answer = "Hasnat works with Python, ML, Pandas, NumPy";
+      else if (q.includes("projects")) answer = "Check the projects section below";
+      else answer = "Thanks for visiting Hasnat's portfolio!";
+
+      document.getElementById("aians").innerText = answer;
+    }
+  </script>
+
+  <div style="position:fixed;bottom:20px;right:20px;background:white;color:black;padding:10px;border-radius:10px">
+
+    <input id="aiq" placeholder="Ask about Hasnat" />
+
+    <button onclick="askAI()">Ask</button>
+
+    <p id="aians"></p>
+
+  </div>
+
+</body>
+
+</html>
